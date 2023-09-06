@@ -28,4 +28,8 @@ public class PlayerInputController : GatherCharacterController
             CallLookEvent(newGaze);
         }
     }
+    public void OnEnter()
+    {
+        CallEnterEvent();
+    }
 }
