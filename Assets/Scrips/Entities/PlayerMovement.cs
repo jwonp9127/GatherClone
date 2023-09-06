@@ -10,6 +10,7 @@ enum States
     idle = 0
 }
 
+
 public class PlayerMovement : MonoBehaviour
 {
     private GatherCharacterController _controller;
