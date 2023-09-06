@@ -7,6 +7,7 @@ public class GatherCharacterController : MonoBehaviour
 {
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
+    public event Action OnEnterEvent;
 
     public void CallMoveEvent(Vector2 direction)
     {
@@ -17,4 +18,10 @@ public class GatherCharacterController : MonoBehaviour
     {
         OnLookEvent?.Invoke(direction);
     }
+
+    public void CallEnterEvent()
+    {
+        OnEnterEvent?.Invoke();
+    }
+
 }

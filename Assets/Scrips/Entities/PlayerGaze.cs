@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class PlayerGaze : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer characterRenderer;
-
     private GatherCharacterController _controller;
 
     private void Awake()
@@ -27,5 +27,7 @@ public class PlayerGaze : MonoBehaviour
     {
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         characterRenderer.flipX = Mathf.Abs(rotZ) > 90f;
+
+
     }
 }

@@ -10,6 +10,7 @@ enum States
     idle = 0
 }
 
+
 public class PlayerMovement : MonoBehaviour
 {
     private GatherCharacterController _controller;
@@ -44,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateState(Vector2 direction)
     {
-        Debug.Log($"x = {direction.x}, y = {direction.y}");
         if (direction == Vector2.zero)
             animator.SetInteger(animationState, (int)(States.idle));
         else
