@@ -17,4 +17,9 @@ public class SceneChangeController : MonoBehaviour
             SceneManager.LoadScene("MainScene");
         }
     }
+
+    public void Intro()
+    {
+        SceneManager.LoadScene("GetNameScene");
+    }
 }
