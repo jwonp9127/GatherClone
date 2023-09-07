@@ -10,7 +10,6 @@ public class GetPlayerInfo : MonoBehaviour
 {
     public void GetInfo(GameObject Peng)
     {
-        //Peng.SetActive(true);
         if (Peng.activeSelf) 
             PlayerPrefs.SetString("PlayerChar", "Peng");
         else

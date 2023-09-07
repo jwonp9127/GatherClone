@@ -44,4 +44,23 @@ public class PlayerName : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        playerName.text = PlayerPrefs.GetString("PlayerName");
+        playerChar = PlayerPrefs.GetString("PlayerChar");
+
+        if (playerChar == "Peng")
+        {
+            Peng.SetActive(true);
+            Cat.SetActive(false);
+            animator.SetInteger("Character", (int)(Characters.Peng));
+        }
+        else
+        {
+            Peng.SetActive(false);
+            Cat.SetActive(true);
+            animator.SetInteger("Character", (int)(Characters.Cat));
+        }
+    }
+
 }
